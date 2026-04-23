@@ -1,282 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="InnovateABC delivers premium digital asset and investment services with live chat, dark mode, and multilingual support." />
-    <title>InnovateABC | Premium Investment Experience</title>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body class="theme-light">
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="brand-block">
-          <img src="./images/logo-PeE6y_DL.png" alt="InnovateABC Logo" class="brand-logo" loading="lazy" />
-          <div class="brand" data-i18n="brand">InnovateABC</div>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#home" data-i18n="navHome">Home</a>
-          <a href="#solutions" data-i18n="navSolutions">Solutions</a>
-          <a href="#converter" data-i18n="navConverter">Converter</a>
-          <a href="#features" data-i18n="navFeatures">Features</a>
-          <a href="#testimonials" data-i18n="navTestimonials">Testimonials</a>
-          <a href="#contact" data-i18n="navContact">Contact</a>
-        </nav>
-        <div class="header-actions">
-          <button id="languageToggle" class="control-btn" aria-label="Change language">ES</button>
-          <button id="themeToggle" class="control-btn" aria-label="Toggle dark mode">Dark</button>
-          <button id="authToggle" class="control-btn" aria-label="Open login panel" data-i18n="loginButton">Login</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="InnovateABC - Premium digital asset strategy platform." />
+  <title>InnovateABC | Premium Investment Experience</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body class="theme-light">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand" data-i18n="brand">InnovateABC</div>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#solutions" data-i18n="navSolutions">Solutions</a>
+        <a href="#features" data-i18n="navFeatures">Features</a>
+        <a href="#testimonials" data-i18n="navTestimonials">Testimonials</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="languageToggle" class="control-btn" aria-label="Change language">ES</button>
+        <button id="themeToggle" class="control-btn" aria-label="Toggle dark mode">Dark</button>
+        <button id="authToggle" class="control-btn" aria-label="Open login panel" data-i18n="loginButton">Login</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div>
+          <p class="eyebrow" data-i18n="heroEyebrow">Professional digital asset strategy</p>
+          <h1 class="hero-title" data-i18n="heroTitle">Premium digital asset strategy for modern investors.</h1>
+          <p class="hero-text" data-i18n="heroSubtitle">Trusted performance, intelligent onboarding, and secure asset management designed for growth and clarity.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact" data-i18n="heroCta">Start your journey</a>
+            <a class="btn btn-secondary" href="#features" data-i18n="heroSecondary">Explore services</a>
+          </div>
         </div>
-      </header>
+        <div class="hero-panel">
+          <div class="hero-card">
+            <strong data-i18n="heroCardTitle">Live support 24/7</strong>
+            <p data-i18n="heroCardText">Connect instantly with our investment specialists through the built-in live chat.</p>
+          </div>
+          <div class="hero-card accent-card">
+            <strong data-i18n="heroStatTitle">+18%</strong>
+            <p data-i18n="heroStatText">Average portfolio growth backed by premium insights.</p>
+          </div>
+        </div>
+      </section>
 
-      <main>
-        <section id="home" class="hero-section">
-          <div class="hero-copy">
-            <p class="eyebrow" data-i18n="heroEyebrow">Professional digital asset strategy</p>
-            <h1 class="hero-title" data-i18n="heroTitle">Premium digital asset strategy for modern investors.</h1>
-            <p class="hero-text" data-i18n="heroSubtitle">Trusted performance, intelligent onboarding, and secure asset management designed for growth and clarity.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact" data-i18n="heroCta">Start your journey</a>
-              <a class="btn btn-secondary" href="#features" data-i18n="heroSecondary">Explore services</a>
-            </div>
-            <div class="countdown" id="investCountdown">
-              <div class="countdown-label">Investment window closes in</div>
-              <div class="countdown-units">
-                <div class="countdown-unit"><span class="countdown-number" id="cd-days">00</span><span class="countdown-text">Days</span></div>
-                <div class="countdown-unit"><span class="countdown-number" id="cd-hours">00</span><span class="countdown-text">Hours</span></div>
-                <div class="countdown-unit"><span class="countdown-number" id="cd-minutes">00</span><span class="countdown-text">Minutes</span></div>
-                <div class="countdown-unit"><span class="countdown-number" id="cd-seconds">00</span><span class="countdown-text">Seconds</span></div>
-            </div>
-          <div class="hero-panel">
-            <div class="hero-card" style="background-image: url('./images/news1-Dv6Jt-N5.jpg'); background-size: cover; background-position: center; position: relative;">
-              <div style="position: relative; z-index: 2;">
-                <strong data-i18n="heroCardTitle">Live support 24/7</strong>
-                <p data-i18n="heroCardText">Connect instantly with our investment specialists through the built-in live chat.</p>
-              </div>
-            <div class="hero-card accent-card">
-              <strong data-i18n="heroStatTitle">+18%</strong>
-              <p data-i18n="heroStatText">Average portfolio growth backed by premium insights.</p>
-            </div>
-        </section>
-
-        <section id="solutions" class="section-panel section-split">
-          <div class="section-panel-copy">
-            <span class="section-label" data-i18n="solutionsLabel">Solutions built for growth</span>
+      <section id="solutions" class="section-panel alternate">
+        <div class="section-split">
+          <div class="section-header">
+            <p class="section-label" data-i18n="solutionsLabel">Solutions built for growth</p>
             <h2 data-i18n="solutionsTitle">A refined platform with enterprise-grade trust.</h2>
-            <p data-i18n="solutionsText">InnovateABC blends innovation, transparency, and personalized support so every decision feels clear and confident.</p>
           </div>
-          <div class="section-grid">
-            <article class="feature-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/news2-sw6ml-fn.jpg'); background-size: cover; background-position: center;">
-              <h3 data-i18n="feature1Title">Secure custody</h3>
-              <p data-i18n="feature1Text">Bank-grade protections and a secure custodian environment for all your digital assets.</p>
-            </article>
-            <article class="feature-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/news3-ZW6kqO5X.jpg'); background-size: cover; background-position: center;">
-              <h3 data-i18n="feature2Title">Transparent reporting</h3>
-              <p data-i18n="feature2Text">Intuitive dashboards, performance summaries, and compliance-ready insights.</p>
-            </article>
-            <article class="feature-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/news4-8GIVVKIf.jpg'); background-size: cover; background-position: center;">
-              <h3 data-i18n="feature3Title">Smart execution</h3>
-              <p data-i18n="feature3Text">Fast trade execution and professional allocation recommendations tailored to your goals.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="converter" class="section-panel">
-          <div class="section-header">
-            <span class="section-label" data-i18n="converterLabel">Currency converter</span>
-            <h2 data-i18n="converterTitle">Convert fiat and crypto instantly.</h2>
-            <p data-i18n="converterText">Check live-relative values across USD, EUR, GBP and the most popular crypto markets.</p>
-          </div>
-          <div class="converter-card">
-            <form class="converter-form" id="converterForm">
-              <div class="converter-row">
-                <label for="converterAmount" data-i18n="converterAmountLabel">Amount</label>
-                <input id="converterAmount" class="converter-input" type="number" min="0" step="any" value="1" />
-              </div>
-              <div class="converter-row">
-                <label for="converterFrom" data-i18n="converterFromLabel">From</label>
-                <select id="converterFrom" class="converter-select">
-                  <option value="USD">USD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="GBP">GBP</option>
-                  <option value="BTC">BTC</option>
-                  <option value="ETH">ETH</option>
-                  <option value="USDT">USDT</option>
-                </select>
-              </div>
-              <div class="converter-row">
-                <label for="converterTo" data-i18n="converterToLabel">To</label>
-                <select id="converterTo" class="converter-select">
-                  <option value="USD">USD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="GBP">GBP</option>
-                  <option value="BTC">BTC</option>
-                  <option value="ETH">ETH</option>
-                  <option value="USDT">USDT</option>
-                </select>
-              </div>
-              <div class="converter-result" id="converterResult">1 USD = 0.000018 BTC</div>
-            </form>
-            <div class="rate-grid" id="rateGrid"></div>
-        </section>
-
-        <section id="features" class="section-panel" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./images/news6-DDn8MdK7.jpg'); background-size: cover; background-position: center;">
-          <div class="section-header">
-            <span class="section-label" data-i18n="featuresLabel">Core advantages</span>
-            <h2 data-i18n="featuresTitle">A premium experience for every investor.</h2>
-          </div>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <strong>Secure</strong>
-              <p data-i18n="stat1Text">Multi-layer security and encryption keep your capital protected.</p>
-            </div>
-            <div class="stat-card">
-              <strong>Reliable</strong>
-              <p data-i18n="stat2Text">Always-on support and data-driven guidance for every market condition.</p>
-            </div>
-            <div class="stat-card">
-              <strong>Accessible</strong>
-              <p data-i18n="stat3Text">Clean interfaces, fast onboarding, and a support team ready to help.</p>
-            </div>
-        </section>
-
-        <section id="news" class="section-panel">
-          <div class="section-header">
-            <span class="section-label">Latest News</span>
-            <h2>Market Insights & Updates</h2>
-          </div>
-          <div class="news-grid">
-            <article class="news-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/news5-DLU2EeMt.avif');">
-              <h3>News 5</h3>
-            </article>
-            <article class="news-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/news7-D8Imr2a9.jpg');">
-              <h3>News 7</h3>
-            </article>
-            <article class="news-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/news8-CZo-f41j.jpg');">
-              <h3>News 8</h3>
-            </article>
-            <article class="news-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/news9-ZTFk6bqZ.jpg');">
-              <h3>News 9</h3>
-            </article>
-            <article class="news-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/news10-C32TrnHb.png');">
-              <h3>News 10</h3>
-            </article>
-          </div>
-        </section>
-
-        <section id="testimonials" class="section-panel section-split alternate">
-          <div class="testimonial-copy">
-            <span class="section-label" data-i18n="testimonialsLabel">Trusted by clients</span>
-            <h2 data-i18n="testimonialsTitle">What our members say</h2>
-            <p data-i18n="testimonialsText">Investors choose InnovateABC for the premium service, reliable execution, and proactive market insights.</p>
-          </div>
-          <div class="testimonial-list">
-            <article class="testimonial-card">
-              <p>“InnovateABC simplified the investment journey and made live support feel truly premium.”</p>
-              <strong>Olivia K.</strong>
-            </article>
-            <article class="testimonial-card">
-              <p>“The platform looks professional, moves fast, and responds immediately when I need help.”</p>
-              <strong>Marcus T.</strong>
-            </article>
-            <article class="testimonial-card">
-              <p>“The conversion tool and investor insights helped me evaluate crypto trades with full confidence.”</p>
-              <strong>Priya S.</strong>
-            </article>
-          </div>
-        </section>
-
-        <section id="contact" class="section-panel">
-          <div class="section-header">
-            <span class="section-label" data-i18n="contactLabel">Ready to connect</span>
-            <h2 data-i18n="contactTitle">Book a consultation or chat instantly.</h2>
-            <p data-i18n="contactText">Our team is available to answer questions, guide strategy, and help you begin with confidence.</p>
-          </div>
-          <div class="contact-grid">
-            <div class="contact-card">
-              <h3 data-i18n="contactCardTitle">Fast response</h3>
-              <p data-i18n="contactCardText">Open the live chat to send a message and receive a prompt callback.</p>
-            </div>
-            <div class="contact-card accent-card">
-              <h3 data-i18n="contactCardTitle2">Tailored onboarding</h3>
-              <p data-i18n="contactCardText2">Our advisors help map a custom plan for your asset goals.</p>
-            </div>
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="#" id="chatToggle" data-i18n="chatButton">Live chat</a>
-            <a class="btn btn-secondary" href="mailto:hello@innovateabc.com" data-i18n="emailButton">Email us</a>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div>
-          <strong>InnovateABC</strong>
-          <p data-i18n="footerText">Premium digital asset advisory powered by seamless support and elegant design.</p>
+          <p data-i18n="solutionsText">InnovateABC blends innovation, transparency, and personalized support so every decision feels clear and confident.</p>
         </div>
-        <div class="footer-meta">
-          <span>&copy; <span id="footerYear"></span> InnovateABC</span>
-          <span data-i18n="footerRights">All rights reserved.</span>
-        </div>
-      </footer>
-    </div>
+      </section>
 
-    <aside class="chat-widget" id="chatWidget" aria-labelledby="chatTitle" aria-hidden="true">
-      <div class="chat-header">
-        <div>
-          <strong id="chatTitle" data-i18n="chatTitle">Live Expert Chat</strong>
-          <p class="chat-subtitle" data-i18n="chatHint">Ask us anything, we are ready to assist.</p>
+      <section id="features" class="section-panel">
+        <p class="section-label" data-i18n="featuresLabel">Core advantages</p>
+        <h2 data-i18n="featuresTitle">A premium experience for every investor.</h2>
+        <div class="section-grid">
+          <div class="feature-card">
+            <h3 data-i18n="feature1Title">Secure custody</h3>
+            <p data-i18n="feature1Text">Bank-grade protections and a secure custodian environment for all your digital assets.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature2Title">Transparent reporting</h3>
+            <p data-i18n="feature2Text">Intuitive dashboards, performance summaries, and compliance-ready insights.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature3Title">Smart execution</h3>
+            <p data-i18n="feature3Text">Fast trade execution and professional allocation recommendations tailored to your goals.</p>
+          </div>
         </div>
-        <button id="chatClose" class="chat-close" aria-label="Close chat">×</button>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <p data-i18n="stat1Text">Multi-layer security and encryption keep your capital protected.</p>
+          </div>
+          <div class="stat-card">
+            <p data-i18n="stat2Text">Always-on support and data-driven guidance for every market condition.</p>
+          </div>
+          <div class="stat-card">
+            <p data-i18n="stat3Text">Clean interfaces, fast onboarding, and a support team ready to help.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section-panel alternate">
+        <div class="testimonial-copy">
+          <p class="section-label" data-i18n="testimonialsLabel">Trusted by clients</p>
+          <h2 data-i18n="testimonialsTitle">What our members say</h2>
+          <p data-i18n="testimonialsText">Investors choose InnovateABC for the premium service, reliable execution, and proactive market insights.</p>
+        </div>
+        <div class="testimonial-list">
+          <div class="testimonial-card">
+            <p>"The platform is intuitive and the support team is incredibly responsive."</p>
+            <strong>Sarah Chen</strong>
+          </div>
+          <div class="testimonial-card">
+            <p>"Professional execution with transparent reporting. Exactly what we needed."</p>
+            <strong>Michael Rodriguez</strong>
+          </div>
+          <div class="testimonial-card">
+            <p>"InnovateABC's security measures and compliance standards are world-class."</p>
+            <strong>Elena Volkov</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-panel">
+        <p class="section-label" data-i18n="contactLabel">Ready to connect</p>
+        <h2 data-i18n="contactTitle">Book a consultation or chat instantly.</h2>
+        <p data-i18n="contactText">Our team is available to answer questions, guide strategy, and help you begin with confidence.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 data-i18n="contactCardTitle">Fast response</h3>
+            <p data-i18n="contactCardText">Open the live chat to send a message and receive a prompt callback.</p>
+            <div class="contact-actions">
+              <button id="chatToggle" class="btn btn-primary" data-i18n="chatButton">Live chat</button>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3 data-i18n="contactCardTitle2">Tailored onboarding</h3>
+            <p data-i18n="contactCardText2">Our advisors help map a custom plan for your asset goals.</p>
+            <div class="contact-actions">
+              <button class="btn btn-secondary" data-i18n="emailButton">Email us</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footerText">Premium digital asset advisory powered by seamless support and elegant design.</p>
+      <div class="footer-meta">
+        <span>&copy; <span id="footerYear">2026</span></span>
+        <span data-i18n="footerRights">All rights reserved.</span>
       </div>
-      <div class="chat-body" id="chatBody">
-        <ul class="chat-history" id="chatList"></ul>
+    </footer>
+  </div>
+
+  <div class="auth-modal-backdrop" id="authModal" aria-hidden="true">
+    <div class="auth-modal">
+      <button class="auth-close" id="authClose" aria-label="Close login panel">✕</button>
+      <h2 class="auth-title" data-i18n="loginTitle">Welcome back</h2>
+      <p class="auth-subtitle" data-i18n="authSubtitle">Access your premium investor dashboard.</p>
+      <div class="auth-switcher">
+        <button class="auth-tab active" data-tab="login" data-i18n="loginTab">Login</button>
+        <button class="auth-tab" data-tab="signup" data-i18n="signupTab">Signup</button>
       </div>
-      <form class="chat-form" id="chatForm">
-        <label class="sr-only" for="chatInput" data-i18n="messageLabel">Type a message</label>
-        <input id="chatInput" type="text" autocomplete="off" placeholder="Type a message..." data-i18n-placeholder="messagePlaceholder" />
-        <button type="submit" class="btn btn-primary" id="chatSubmit" data-i18n="sendButton">Send</button>
+      <form class="auth-form active" id="loginForm">
+        <div>
+          <label data-i18n="authEmailLabel">Email address</label>
+          <input type="email" required placeholder="investor@example.com" class="auth-input" />
+        </div>
+        <div>
+          <label data-i18n="authPasswordLabel">Password</label>
+          <input type="password" required placeholder="••••••••" class="auth-input" />
+        </div>
+        <button type="submit" class="btn btn-primary" data-i18n="authSubmitLogin">Sign in</button>
       </form>
-    </aside>
-
-    <aside class="auth-modal-backdrop" id="authModal" aria-hidden="true">
-      <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
-        <div class="auth-modal-header">
-          <div>
-            <strong id="authTitle" data-i18n="loginTitle">Welcome back</strong>
-            <p class="auth-subtitle" data-i18n="authSubtitle">Access your premium investor dashboard.</p>
-          </div>
-          <button id="authClose" class="auth-close" aria-label="Close login panel">×</button>
+      <form class="auth-form" id="signupForm">
+        <div>
+          <label data-i18n="authNameLabel">Full name</label>
+          <input type="text" required placeholder="Your name" class="auth-input" />
         </div>
-        <div class="auth-switcher" role="tablist">
-          <button id="loginTab" class="auth-tab auth-tab-active" type="button" role="tab" aria-selected="true" data-i18n="loginTab">Login</button>
-          <button id="signupTab" class="auth-tab" type="button" role="tab" aria-selected="false" data-i18n="signupTab">Signup</button>
+        <div>
+          <label data-i18n="authEmailLabel">Email address</label>
+          <input type="email" required placeholder="investor@example.com" class="auth-input" />
         </div>
-        <div class="auth-form-wrapper">
-          <form id="loginForm" class="auth-form auth-form-active">
-            <label for="authEmail" data-i18n="authEmailLabel">Email address</label>
-            <input id="authEmail" type="email" class="auth-input" placeholder="you@example.com" />
-            <label for="authPassword" data-i18n="authPasswordLabel">Password</label>
-            <input id="authPassword" type="password" class="auth-input" placeholder="••••••••" />
-            <button type="submit" class="btn btn-primary" data-i18n="authSubmitLogin">Sign in</button>
-          </form>
-          <form id="signupForm" class="auth-form">
-            <label for="authName" data-i18n="authNameLabel">Full name</label>
-            <input id="authName" type="text" class="auth-input" placeholder="Your name" />
-            <label for="authEmailSignup" data-i18n="authEmailLabel">Email address</label>
-            <input id="authEmailSignup" type="email" class="auth-input" placeholder="you@example.com" />
-            <label for="authPasswordSignup" data-i18n="authPasswordLabel">Password</label>
-            <input id="authPasswordSignup" type="password" class="auth-input" placeholder="••••••••" />
-            <button type="submit" class="btn btn-primary" data-i18n="authSubmitSignup">Create account</button>
-          </form>
+        <div>
+          <label data-i18n="authPasswordLabel">Password</label>
+          <input type="password" required placeholder="••••••••" class="auth-input" />
         </div>
-        <p class="auth-note" data-i18n="authNote">Secure login for investors who want premium access.</p>
-      </div>
-    </aside>
-
-    <div class="chat-toggle-button" id="chatToggleButton" aria-label="Open live chat" role="button" tabindex="0">
-      <span class="chat-icon">💬</span>
-      <span class="chat-label" data-i18n="chatBadge">Chat</span>
+        <button type="submit" class="btn btn-primary" data-i18n="authSubmitSignup">Create account</button>
+      </form>
     </div>
+  </div>
 
-    <script src="./index.js"></script>
-  </body>
+  <div class="chat-widget" id="chatWidget" aria-hidden="true" role="region" aria-label="Live chat support">
+    <div class="chat-header">
+      <div>
+        <strong data-i18n="chatTitle">Live Expert Chat</strong>
+        <p class="chat-subtitle" data-i18n="chatHint">Ask us anything, we are ready to assist.</p>
+      </div>
+      <button class="chat-close" id="chatClose" aria-label="Close chat">×</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <ul class="chat-history" id="chatList"></ul>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input type="text" id="chatInput" required placeholder="Type a message..." data-i18n-placeholder="messagePlaceholder" class="chat-input" />
+      <button type="submit" class="btn btn-primary" data-i18n="sendButton">Send</button>
+    </form>
+  </div>
+
+  <div class="chat-toggle-button" id="chatToggleButton" aria-label="Open live chat" role="button" tabindex="0">
+    <span class="chat-icon">💬</span>
+    <span class="chat-label" data-i18n="chatBadge">Chat</span>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
 </html>
