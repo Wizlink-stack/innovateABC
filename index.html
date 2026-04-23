@@ -13,7 +13,6 @@
         <div class="brand-block">
           <img src="./images/logo-PeE6y_DL.png" alt="InnovateABC Logo" class="brand-logo" loading="lazy" />
           <div class="brand" data-i18n="brand">InnovateABC</div>
-        </div>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#home" data-i18n="navHome">Home</a>
           <a href="#solutions" data-i18n="navSolutions">Solutions</a>
@@ -21,6 +20,8 @@
           <a href="#features" data-i18n="navFeatures">Features</a>
           <a href="#testimonials" data-i18n="navTestimonials">Testimonials</a>
           <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="header-actions">
           <button id="languageToggle" class="control-btn" aria-label="Change language">ES</button>
           <button id="themeToggle" class="control-btn" aria-label="Toggle dark mode">Dark</button>
           <button id="authToggle" class="control-btn" aria-label="Open login panel" data-i18n="loginButton">Login</button>
@@ -37,19 +38,24 @@
               <a class="btn btn-primary" href="#contact" data-i18n="heroCta">Start your journey</a>
               <a class="btn btn-secondary" href="#features" data-i18n="heroSecondary">Explore services</a>
             </div>
-          </div>
+            <div class="countdown" id="investCountdown">
+              <div class="countdown-label">Investment window closes in</div>
+              <div class="countdown-units">
+                <div class="countdown-unit"><span class="countdown-number" id="cd-days">00</span><span class="countdown-text">Days</span></div>
+                <div class="countdown-unit"><span class="countdown-number" id="cd-hours">00</span><span class="countdown-text">Hours</span></div>
+                <div class="countdown-unit"><span class="countdown-number" id="cd-minutes">00</span><span class="countdown-text">Minutes</span></div>
+                <div class="countdown-unit"><span class="countdown-number" id="cd-seconds">00</span><span class="countdown-text">Seconds</span></div>
+            </div>
           <div class="hero-panel">
-<div class="hero-card" style="background-image: url('./images/news1-Dv6Jt-N5.jpg'); background-size: cover; background-position: center; position: relative;">
+            <div class="hero-card" style="background-image: url('./images/news1-Dv6Jt-N5.jpg'); background-size: cover; background-position: center; position: relative;">
               <div style="position: relative; z-index: 2;">
                 <strong data-i18n="heroCardTitle">Live support 24/7</strong>
                 <p data-i18n="heroCardText">Connect instantly with our investment specialists through the built-in live chat.</p>
               </div>
-            </div>
             <div class="hero-card accent-card">
               <strong data-i18n="heroStatTitle">+18%</strong>
               <p data-i18n="heroStatText">Average portfolio growth backed by premium insights.</p>
             </div>
-          </div>
         </section>
 
         <section id="solutions" class="section-panel section-split">
@@ -59,15 +65,15 @@
             <p data-i18n="solutionsText">InnovateABC blends innovation, transparency, and personalized support so every decision feels clear and confident.</p>
           </div>
           <div class="section-grid">
-<article class="feature-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/news2-sw6ml-fn.jpg'); background-size: cover; background-position: center;">
+            <article class="feature-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/news2-sw6ml-fn.jpg'); background-size: cover; background-position: center;">
               <h3 data-i18n="feature1Title">Secure custody</h3>
               <p data-i18n="feature1Text">Bank-grade protections and a secure custodian environment for all your digital assets.</p>
             </article>
-<article class="feature-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/news3-ZW6kqO5X.jpg'); background-size: cover; background-position: center;">
+            <article class="feature-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/news3-ZW6kqO5X.jpg'); background-size: cover; background-position: center;">
               <h3 data-i18n="feature2Title">Transparent reporting</h3>
               <p data-i18n="feature2Text">Intuitive dashboards, performance summaries, and compliance-ready insights.</p>
             </article>
-<article class="feature-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/news4-8GIVVKIf.jpg'); background-size: cover; background-position: center;">
+            <article class="feature-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/news4-8GIVVKIf.jpg'); background-size: cover; background-position: center;">
               <h3 data-i18n="feature3Title">Smart execution</h3>
               <p data-i18n="feature3Text">Fast trade execution and professional allocation recommendations tailored to your goals.</p>
             </article>
@@ -111,7 +117,6 @@
               <div class="converter-result" id="converterResult">1 USD = 0.000018 BTC</div>
             </form>
             <div class="rate-grid" id="rateGrid"></div>
-          </div>
         </section>
 
         <section id="features" class="section-panel" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./images/news6-DDn8MdK7.jpg'); background-size: cover; background-position: center;">
@@ -132,7 +137,6 @@
               <strong>Accessible</strong>
               <p data-i18n="stat3Text">Clean interfaces, fast onboarding, and a support team ready to help.</p>
             </div>
-          </div>
         </section>
 
         <section id="news" class="section-panel">
@@ -196,7 +200,6 @@
               <h3 data-i18n="contactCardTitle2">Tailored onboarding</h3>
               <p data-i18n="contactCardText2">Our advisors help map a custom plan for your asset goals.</p>
             </div>
-          </div>
           <div class="contact-actions">
             <a class="btn btn-primary" href="#" id="chatToggle" data-i18n="chatButton">Live chat</a>
             <a class="btn btn-secondary" href="mailto:hello@innovateabc.com" data-i18n="emailButton">Email us</a>
