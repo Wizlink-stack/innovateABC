@@ -1,0 +1,11 @@
+{
+  "name": "innovateabc",
+  "version": "1.0.0",
+  "description": "Premium digital asset strategy platform for modern investors",
+  "private": true,
+  "scripts": {
+    "deploy": "vercel"
+  },
+  "author": "",
+  "license": "ISC"
+}

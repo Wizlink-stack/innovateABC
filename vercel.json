@@ -1,0 +1,7 @@
+{
+  "buildCommand": "",
+  "installCommand": "",
+  "framework": "static",
+  "outputDirectory": ".",
+  "cleanUrls": true
+}
