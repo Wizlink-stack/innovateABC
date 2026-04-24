@@ -1,0 +1,190 @@
+ and cont<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter - ABTCMINING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'af,sq,ar,be,bg,ca,zh-CN,zh-TW,hr,cs,da,nl,en,eo,et,tl,fi,fr,gl,ka,de,el,gu,ht,iw,hi,hu,is,id,ga,it,ja,kn,ko,lo,lv,lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,ta,te,th,tr,uk,ur,vi,cy,yi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/logo/download%20(2).png" alt="ABTCMINING Logo" class="nav-logo">
+                <h1 class="nav-title">ABTCMINING</h1>
+            </div>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">🌙</button>
+                <button id="translate-toggle" class="control-btn" aria-label="Toggle translate">🌐</button>
+                <button id="menu-toggle" class="control-btn menu-toggle" aria-label="Toggle navigation">☰</button>
+            </div>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="features.html" class="nav-link">Features</a></li>
+            <li><a href="news.html" class="nav-link">News</a></li>
+            <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+            <li><a href="converter.html" class="nav-link active">Converter</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="container page-header-content">
+            <h1 class="page-title">BTC to USD <span class="gradient-text">Converter</span></h1>
+            <p class="page-subtitle">Live conversion rates powered by CoinGecko API</p>
+        </div>
+    </header>
+
+    <!-- Converter Section -->
+    <section id="convert" class="section" data-animate="fade-up">
+        <div class="container">
+            <h2 class="section-title">Easily convert Bitcoin (BTC) to US Dollars (USD)</h2>
+            <p class="section-text">Instantly convert Bitcoin to USD with live rates. Track the value of American Bitcoin in real-time and make informed transactions.</p>
+            <div class="converter-card">
+                <div class="converter-input">
+                    <label for="btc-amount">BTC Amount</label>
+                    <input type="number" id="btc-amount" placeholder="0.00000000" step="0.00000001">
+                </div>
+                <button id="convert-btn" class="btn btn-primary btn-full">
+                    <span>Convert</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <div class="converter-output">
+                    <p id="usd-result" class="result-amount">$0.00</p>
+                    <p id="rate-info" class="result-rate">Current BTC/USD rate: Loading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conversion Info Section -->
+    <section class="section glass-section" data-animate="fade-up">
+        <div class="container">
+            <h2 class="section-title">Why Use Our Converter?</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-animate="fade-up" data-delay="0">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Live Rates</h3>
+                    <p>Real-time Bitcoin to USD rates updated every minute from trusted market sources.</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up" data-delay="100">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure</h3>
+                    <p>No data is stored or transmitted. All calculations happen in your browser.</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up" data-delay="200">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Convert on the go with our fully responsive converter interface.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="images/logo/download%20(2).png" alt="ABTCMINING Logo" class="footer-logo">
+                <p class="footer-disclaimer">ABTCMINING and trading leveraged products like Forex and CFDs may not be suitable for all investors, as they carry a degree of risk to your capital. Please ensure that you fully understand the risks involved, considering your investment objectives and level of experience. Seek independent advice if necessary, and read the full Risk Disclosure.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="converter.html">Converter</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Terms & Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Partner</h4>
+                <ul>
+                    <li><a href="#">Coin Base</a></li>
+                    <li><a href="#">Coin Desk</a></li>
+                    <li><a href="#">Binance</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Download</h4>
+                <ul>
+                    <li><a href="#">Play Store</a></li>
+                    <li><a href="#">App Store</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> ABTCMINING. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Live Chat -->
+    <div id="chat-toggle" class="chat-toggle">
+        <span class="chat-icon">💬</span>
+    </div>
+    <div id="chat-modal" class="chat-modal">
+        <div class="chat-header">
+            <h3>Live Chat Support</h3>
+            <span id="chat-close">&times;</span>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">Hello! How can we help you today?</div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send">Send</button>
+        </div>
+    </div>
+
+    <!-- Language Dropdown -->
+    <div id="translate-dropdown" class="translate-dropdown">
+        <div class="translate-dropdown-header">
+            <h4>Select Language</h4>
+            <span class="translate-close" id="translate-close">&times;</span>
+        </div>
+        <div class="translate-dropdown-body" id="translate-dropdown-body">
+            <!-- Languages injected by JS -->
+        </div>
+    </div>
+
+    <!-- Google Translate Element -->
+    <div id="google_translate_element" style="display: none;"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

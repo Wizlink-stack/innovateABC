@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABTCMINING - Advanced Mining Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'af,sq,ar,be,bg,ca,zh-CN,zh-TW,hr,cs,da,nl,en,eo,et,tl,fi,fr,gl,ka,de,el,gu,ht,iw,hi,hu,is,id,ga,it,ja,kn,ko,lo,lv,lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,ta,te,th,tr,uk,ur,vi,cy,yi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/logo/download%20(2).png" alt="ABTCMINING Logo" class="nav-logo">
+                <h1 class="nav-title">ABTCMINING</h1>
+            </div>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">🌙</button>
+                <button id="translate-toggle" class="control-btn" aria-label="Toggle translate">🌐</button>
+                <button id="menu-toggle" class="control-btn menu-toggle" aria-label="Toggle navigation">☰</button>
+            </div>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+            <li><a href="#" class="nav-link" data-page="about">About</a></li>
+            <li><a href="#" class="nav-link" data-page="features">Features</a></li>
+            <li><a href="#" class="nav-link" data-page="news">News</a></li>
+            <li><a href="#" class="nav-link" data-page="reviews">Reviews</a></li>
+            <li><a href="#" class="nav-link" data-page="converter">Converter</a></li>
+            <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="page-home" class="page-section active">
+        <header id="hero">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="images/background%20animations/cce3420c4befa0a135e495d03b7f5f8c_720w.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title" data-animate="fade-up">The most reliable <span class="gradient-text">Stocks Platform</span></h1>
+                <p class="hero-text" data-animate="fade-up" data-delay="200">Join the future of digital asset mining. Our platform leverages state-of-the-art mining farms powered by renewable energy, creating secure, high-performance operations.</p>
+                <div class="hero-buttons" data-animate="fade-up" data-delay="400">
+                    <a href="#" class="btn btn-primary" onclick="showPage('converter')">Start Mining</a>
+                    <a href="#" class="btn btn-outline" onclick="showPage('contact')">Sign up</a>
+                </div>
+                <img src="images/bitcion-mining620x465.webp" alt="Bitcoin" class="hero-image" data-animate="float">
+            </div>
+        </header>
+
+        <section id="stats" class="section stats-section" data-animate="fade-up">
+            <div class="container stats-grid">
+                <div class="stat-card" data-animate="count-up">
+                    <h3 class="stat-number" data-target="19000000">0</h3>
+                    <p class="stat-label">People Involved in Mining Operations</p>
+                </div>
+                <div class="stat-card" data-animate="count-up">
+                    <h3 class="stat-number" data-target="100">0</h3>
+                    <p class="stat-label">Active Investors and Partners</p>
+                </div>
+                <div class="stat-card" data-animate="count-up">
+                    <h3 class="stat-number" data-target="50">0</h3>
+                    <p class="stat-label">Strategic Technology Partnerships</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="countdown" class="section countdown-section" data-animate="fade-up">
+            <div class="countdown-bg"></div>
+            <div class="container countdown-content">
+                <h2 class="countdown-title">New <span class="gradient-text">ABTC Mining Opportunities</span> In</h2>
+                <div class="timer" id="timer">
+                    <div class="time-unit"><span id="days" class="time-number">00</span><span class="time-label">Days</span></div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit"><span id="hours" class="time-number">00</span><span class="time-label">Hours</span></div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit"><span id="minutes" class="time-number">00</span><span class="time-label">Minutes</span></div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit"><span id="seconds" class="time-number">00</span><span class="time-label">Seconds</span></div>
+                </div>
+                <button class="btn btn-primary btn-glow" onclick="showPage('converter')">Invest in ABTC Markets Today</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="page-about" class="page-section">
+        <header class="page-header">
+            <div class="page-header-bg"></div>
+            <div class="container page-header-content">
+                <h1 class="page-title">About <span class="gradient-text">ABTCMINING</span></h1>
+                <p class="page-subtitle">Building the future of digital asset mining since 2020</p>
+            </div>
+        </header>
+        <section class="section glass-section" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section-title">Building a Digital Asset Treasury for the Long Term</h2>
+                <p class="section-text">Our company is focused on accumulating digital assets as a core treasury holding. Founded in 2020, the company combines efficient mining operations with a long-term asset growth strategy.</p>
+            </div>
+        </section>
+        <section class="section feature-section" data-animate="fade-up">
+            <div class="container feature-grid">
+                <div class="feature-content">
+                    <h2 class="section-title">Pioneering Stocks Mining Across the World</h2>
+                    <p class="section-text">The ABTCMINING Program takes advantage of the power of efficient and specialized mining hardware to help maximize returns. By participating in this program, you invest in state-of-the-art mining equipment designed to mine Bitcoin and other digital assets. Our mining operations are strategically optimized to ensure that your investment works for you 24/7, earning consistent rewards in the form of stocks.</p>
+                </div>
+                <div class="feature-image-wrapper">
+                    <img src="images/arrays-of-servers-in-crypto-mining-farms-generate-the-digital-wealth-by-solving-puzzles-for-bitcoins-video.jpg" alt="Mining Operations" class="feature-image">
+                    <div class="feature-glow"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section feature-section" data-animate="fade-up">
+            <div class="container feature-grid reverse">
+                <div class="feature-image-wrapper">
+                    <img src="images/F6A6923-2048x1447.jpg" alt="Mining Platform" class="feature-image">
+                    <div class="feature-glow"></div>
+                </div>
+                <div class="feature-content">
+                    <h2 class="section-title">Leading Digital Mining Platform</h2>
+                    <p class="section-text">Our platform provides cutting-edge infrastructure for large-scale mining operations, ensuring maximum efficiency, minimal downtime, and full operational compliance.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section feature-section" data-animate="fade-up">
+            <div class="container feature-grid">
+                <div class="feature-content">
+                    <h2 class="section-title">100% Secured Operations</h2>
+                    <p class="section-text">All mining operations are fully secured with advanced cybersecurity measures and insured hardware. We prioritize investor safety and data protection above all.</p>
+                </div>
+                <div class="feature-image-wrapper">
+                    <img src="images/OADD2.webp" alt="Secured Operations" class="feature-image">
+                    <div class="feature-glow"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section glass-section" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section-title">Sustainable Mining Ecosystem</h2>
+                <p class="section-text">Our ecosystem integrates renewable energy sources and optimized mining systems, providing an efficient and environmentally responsible mining experience for all stakeholders.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- FEATURES PAGE -->
+    <div id="page-features" class="page-section">
+        <header class="page-header">
+            <div class="page-header-bg"></div>
+            <div class="container page-header-content">
+                <h1 class="page-title">Our <span class="gradient-text">Features</span></h1>
+                <p class="page-subtitle">State-of-the-art technology powering your mining investments</p>
+            </div>
+        </header>
+        <section class="section" data-animate="fade-up">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card" data-animate="fade-up" data-delay="0">
+                        <div class="feature-icon">⚡</div>
+                        <h3>High-Performance Mining</h3>
+                        <p>Our specialized mining hardware is optimized for maximum efficiency and returns. State-of-the-art ASIC miners deliver industry-leading hash rates with minimal power consumption.</p>
+                    </div>
+                    <div class="feature-card" data-animate="fade-up" data-delay="100">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Advanced Security</h3>
+                        <p>Enterprise-grade cybersecurity measures protect all operations. Multi-layer encryption, cold storage solutions, and 24/7 monitoring ensure your assets remain secure.</p>
+                    </div>
+                    <div class="feature-card" data-animate="fade-up" data-delay="200">
+                        <div class="feature-icon">🌱</div>
+                        <h3>Renewable Energy</h3>
+                        <p>Our mining facilities are powered by renewable energy sources. We prioritize sustainability while maintaining maximum operational efficiency and profitability.</p>
+                    </div>
+                    <div class="feature-card" data-animate="fade-up" data-delay="300">
+                        <div class="feature-icon">📊</div>
+                        <h3>Real-Time Analytics</h3>
+                        <p>Track your mining performance with detailed analytics dashboards. Monitor hash rates, earnings, and market trends in real-time from any device.</p>
+                    </div>
+                    <div class="feature-card" data-animate="fade-up" data-delay="400">
+                        <div class="feature-icon">💰</div>
+                        <h3>Instant Conversions</h3>
+                        <p>Convert your mined Bitcoin to USD instantly with live market rates. Our integrated converter ensures you get the best value for your digital assets.</p>
+                    </div>
+                    <div class="feature-card" data-animate="fade-up" data-delay="500">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Expert Support</h3>
+                        <p>Our dedicated support team is available around the clock. Whether you need technical assistance or investment advice, we're here to help.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section explore-section" data-animate="fade-up">
+            <div class="container explore-grid">
+                <div class="explore-content">
+                    <h2 class="section-title">Explore the world of <span class="gradient-text">American Bitcoin</span></h2>
+                    <p class="section-text">Digital assets are reshaping the way people invest, trade, and store value globally. With live market rates, easy conversions, and secure transactions, you can track your holdings and make informed decisions anytime, anywhere.</p>
+                    <p class="section-text">Whether you are a beginner or an experienced investor, our platform opens doors to seamless trading, faster transactions, and smarter investments.</p>
+                    <button class="btn btn-primary" onclick="showPage('converter')">Start Exploring →</button>
+                </div>
+                <div class="explore-image-wrapper">
+                    <img src="images/explore-DYvqRt_X.jpg" alt="American Bitcoin" class="explore-image">
+                    <div class="explore-glow"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- NEWS PAGE -->
+    <div id="page-news" class="page-section">
+        <header class="page-header">
+            <div class="page-header-bg"></div>
+            <div class="container page-header-content">
+                <h1 class="page-title">ABC Mining <span class="gradient-text">News & Insights</span></h1>
+                <p class="page-subtitle">Stay up to date with the latest from the digital asset mining industry</p>
+            </div>
+        </header>
+        <section class="section" data-animate="fade-up">
+            <div class="container">
+                <div class="news-grid">
+                    <article class="news-card" data-animate="fade-up" data-delay="0">
+                        <div class="news-image-wrapper"><img src="images/news6-DDn8MdK7.jpg" alt="News"></div>
+                        <div class="news-content">
+                            <h3>World's Oldest Bitcoin Mining Pool Marks 15th Anniversary</h3>
+                            <p>Bitcoin mining pool hits major milestone</p>
+                            <a href="#" class="news-link">Read more →</a>
+                        </div>
+                    </article>
+                    <article class="news-card" data-animate="fade-up" data-delay="100">
+                        <div class="news-image-wrapper"><img src="images/news7-D8Imr2a9.jpg" alt="News"></div>
+                        <div class="news-content">
+                            <h3>NGS Crypto Wound Up After $60M Scheme</h3>
+                            <p>Australian crypto mining scheme liquidated</p>
+                            <a href="#" class="news-link">Read more →</a>
+                        </div>
+                    </article>
+                    <article class="news-card" data-animate="fade-up" data-delay="200">
+                        <div class="news-image-wrapper"><img src="images/news8-CZo-f41j.jpg" alt="News"></div>
+                        <div class="news-content">
+                            <h3>Satellite Data Shows Heat Leaks at Major US Mining Center</h3>
+                            <p>Thermal imagery reveals mining infrastructure impacts</p>
+                            <a href="#" class="news-link">Read more →</a>
+                        </div>
+                    </article>
+                    <article class="news-card" data-animate="fade-up" data-delay="300">
+                        <div class="news-image-wrapper"><img src="images/news9-ZTFk6bqZ.jpg" alt="News"></div>
+                        <div class="news-content">
+                            <h3>Experts Doubt China Will Lift Bitcoin Mining Ban</h3>
+                            <p>China's mining restrictions unlikely to ease</p>
+                            <a href="#" class="news-link">Read more →</a>
+                        </div>
+                    </article>
+                    <article class="news-card" data-animate="fade-up" data-delay="400">
+                        <div class="news-image-wrapper"><img src="images/news10-C32TrnHb.png" alt="News"></div>
+                        <div class="news-content">
+                            <h3>AI Drives New Mining Strategy Shift</h3>
+                            <p>Crypto miners pivot toward AI workloads</p>
+                            <a href="#" class="news-link">Read more →</a>
+                        </div>
+                    </article>
+                    <article class="news-card" data-animate="fade-up" data-delay="500">
+                        <div class="news-image-wrapper"><img src="images/news1-Dv6Jt-N5.jpg" alt="News"></div>
+                        <div class="news-content">
+                            <h3>ABTC Launches New Mining Farm</h3>
+                            <p>ABTC Launches New Mining Farm</p>
+                            <a href="#" class="news-link">Read more →</a>
+                        </div>
+                    </article>
+                    <article class="news-card" data-animate="fade-up" data-delay="0">
+                        <div class="news-image-wrapper"><img src="images/news2-sw6ml-fn.jpg" alt="News"></div>
+                        <div class="news-content">
+                            <h3>Bitcoin Hash Rate Reaches All-Time High</h3>
+                            <p>Network security at unprecedented levels</p>
+                            <a href="#" class="news-link">Read more →</a>
+                        </div>
+                    </article>
+                    <article class="news-card" data-animate="fade-up" data-delay="100">
+                        <div class="news-image-wrapper"><img src="images/news3-ZW6kqO5X.jpg" alt="News"></div>
+                        <div class="news-content">
+                            <h3>Renewable Energy Powers 60% of Mining</h3>
+                            <p>Sustainability milestone achieved industry-wide</p>
+                            <a href="#" class="news-link">Read more →</a>
+                        </div>
+                    </article>
+                    <article class="news-card" data-animate="fade-up" data-delay="200">
+                        <div class="news-image-wrapper"><img src="images/news4-8GIVVKIf.jpg" alt="News"></div>
+                        <div class="news-content">
+                            <h3>Major Institutional Investment in Mining</h3>
+                            <p>Wall Street enters crypto mining sector</p>
+                            <a href="#" class="news-link">Read more →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- REVIEWS PAGE -->
+    <div id="page-reviews" class="page-section">
+        <header class="page-header">
+            <div class="page-header-bg"></div>
+            <div class="container page-header-content">
+                <h1 class="page-title">Investor <span class="gradient-text">Reviews</span></h1>
+                <p class="page-subtitle">Hear what our clients say about their experience with ABTCMINING</p>
+            </div>
+        </header>
+        <section class="section testimonials-section" data-animate="fade-up">
+            <div class="container">
+                <div class="testimonials-wrapper">
+                    <div class="swiper testimonial-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote">"Investing through this mining platform has significantly boosted my portfolio. The team's transparency, advanced infrastructure, and real-time monitoring tools make it a trustworthy choice for serious investors."</div>
+                                    <div class="testimonial-author">
+                                        <img src="images/c1-SSiKdafu.jpg" alt="John Doe" class="testimonial-avatar">
+                                        <div class="testimonial-info"><h4>John Doe</h4><p>Mining Investor</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote">"The integration of renewable energy and high-performance mining equipment convinced me to move my investments here. Professional, transparent, and profitable."</div>
+                                    <div class="testimonial-author">
+                                        <img src="images/c2-BAzwWnB7.png" alt="Henry Marck" class="testimonial-avatar">
+                                        <div class="testimonial-info"><h4>Henry Marck</h4><p>Technology Entrepreneur</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote">"I appreciate the hands-on guidance and operational insights provided by the team. Mining has never been easier to participate in safely and profitably."</div>
+                                    <div class="testimonial-author">
+                                        <img src="images/c3-DpjWQ8li.jpg" alt="Antim Reck" class="testimonial-avatar">
+                                        <div class="testimonial-info"><h4>Antim Reck</h4><p>Tech Investor</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote">"This platform stands out with expert support and reliable performance. Ideal for anyone looking to invest in large-scale mining."</div>
+                                    <div class="testimonial-author">
+                                        <img src="images/c3-DpjWQ8li.jpg" alt="Kenn Gallagher" class="testimonial-avatar">
+                                        <div class="testimonial-info"><h4>Kenn Gallagher</h4><p>Digital Asset Investor</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span class="star-half">★</span></div>
+                        <p>4.8/5 from 200+ Investors</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section-title">More Investor Stories</h2>
+                <div class="review-cards-grid">
+                    <div class="review-card" data-animate="fade-up" data-delay="0">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"After 6 months with ABTCMINING, my returns have exceeded all expectations. The dashboard makes it easy to track everything in real-time."</p>
+                        <div class="review-author"><strong>Sarah Mitchell</strong><span>Portfolio Manager</span></div>
+                    </div>
+                    <div class="review-card" data-animate="fade-up" data-delay="100">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"The customer support team is exceptional. They walked me through every step of the setup process and continue to provide valuable insights."</p>
+                        <div class="review-author"><strong>David Chen</strong><span>Business Owner</span></div>
+                    </div>
+                    <div class="review-card" data-animate="fade-up" data-delay="200">
+                        <div class="review-stars">★★★★☆</div>
+                        <p class="review-text">"Great platform for both beginners and experienced miners. The educational resources helped me understand the mining process thoroughly."</p>
+                        <div class="review-author"><strong>Emma Rodriguez</strong><span>Financial Analyst</span></div>
+                    </div>
+                    <div class="review-card" data-animate="fade-up" data-delay="300">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"I've tried several mining platforms, and ABTCMINING is by far the most reliable. Uptime is excellent and payouts are always on time."</p>
+                        <div class="review-author"><strong>Michael Foster</strong><span>Crypto Trader</span></div>
+                    </div>
+                    <div class="review-card" data-animate="fade-up" data-delay="400">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"The renewable energy focus was a big selling point for me. It's great to invest in crypto while supporting sustainable practices."</p>
+                        <div class="review-author"><strong>Lisa Thompson</strong><span>Environmental Consultant</span></div>
+                    </div>
+                    <div class="review-card" data-animate="fade-up" data-delay="500">
+                        <div class="review-stars">★★★★☆</div>
+                        <p class="review-text">"Solid returns and transparent fee structure. The mobile app makes it convenient to check my mining status from anywhere."</p>
+                        <div class="review-author"><strong>James Wilson</strong><span>Software Engineer</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONVERTER PAGE -->
+    <div id="page-converter" class="page-section">
+        <header class="page-header">
+            <div class="page-header-bg"></div>
+            <div class="container page-header-content">
+                <h1 class="page-title">BTC to USD <span class="gradient-text">Converter</span></h1>
+                <p class="page-subtitle">Live conversion rates powered by CoinGecko API</p>
+            </div>
+        </header>
+        <section class="section" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section-title">Easily convert Bitcoin (BTC) to US Dollars (USD)</h2>
+                <p class="section-text">Instantly convert Bitcoin to USD with live rates. Track the value of American Bitcoin in real-time and make informed transactions.</p>
+                <div class="converter-card">
+                    <div class="converter-input">
+                        <label for="btc-amount">BTC Amount</label>
+                        <input type="number" id="btc-amount" placeholder="0.00000000" step="0.00000001">
+                    </div>
+                    <button id="convert-btn" class="btn btn-primary btn-full">
+                        <span>Convert</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <div class="converter-output">
+                        <p id="usd-result" class="result-amount">$0.00</p>
+                        <p id="rate-info" class="result-rate">Current BTC/USD rate: Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section glass-section" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section-title">Why Use Our Converter?</h2>
+                <div class="features-grid">
+                    <div class="feature-card" data-animate="fade-up" data-delay="0">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Live Rates</h3>
+                        <p>Real-time Bitcoin to USD rates updated every minute from trusted market sources.</p>
+                    </div>
+                    <div class="feature-card" data-animate="fade-up" data-delay="100">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure</h3>
+                        <p>No data is stored or transmitted. All calculations happen in your browser.</p>
+                    </div>
+                    <div class="feature-card" data-animate="fade-up" data-delay="200">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Convert on the go with our fully responsive converter interface.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="page-contact" class="page-section">
+        <header class="page-header">
+            <div class="page-header-bg"></div>
+            <div class="container page-header-content">
+                <h1 class="page-title">Contact <span class="gradient-text">Us</span></h1>
+                <p class="page-subtitle">Have questions? Our team is here to help</p>
+            </div>
+        </header>
+        <section class="section contact-section" data-animate="fade-up">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-content">
+                        <h2 class="section-title">Contact American Bitcoin</h2>
+                        <p class="section-text">Have questions about American Bitcoin or our Bitcoin accumulation strategy? Our team is available to assist you. Reach out to us directly or email us at <a href="mailto:support@innovateabc.com" class="contact-email">support@innovateabc.com</a>.</p>
+                    </div>
+                    <button class="btn btn-primary btn-glow" id="contact-btn">Contact Us</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="images/logo/download%20(2).png" alt="ABTCMINING Logo" class="footer-logo">
+                <p class="footer-disclaimer">ABTCMINING and trading leveraged products like Forex and CFDs may not be suitable for all investors, as they carry a degree of risk to your capital. Please ensure that you fully understand the risks involved, considering your investment objectives and level of experience. Seek independent advice if necessary, and read the full Risk Disclosure.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('features')">Features</a></li>
+                    <li><a href="#" onclick="showPage('news')">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#" onclick="showPage('reviews')">Reviews</a></li>
+                    <li><a href="#" onclick="showPage('converter')">Converter</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                    <li><a href="#">Terms & Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Partner</h4>
+                <ul>
+                    <li><a href="#">Coin Base</a></li>
+                    <li><a href="#">Coin Desk</a></li>
+                    <li><a href="#">Binance</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Download</h4>
+                <ul>
+                    <li><a href="#">Play Store</a></li>
+                    <li><a href="#">App Store</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> ABTCMINING. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Live Chat -->
+    <div id="chat-toggle" class="chat-toggle">
+        <span class="chat-icon">💬</span>
+    </div>
+    <div id="chat-modal" class="chat-modal">
+        <div class="chat-header">
+            <h3>Live Chat Support</h3>
+            <span id="chat-close">&times;</span>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">Hello! How can we help you today?</div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send">Send</button>
+        </div>
+    </div>
+
+    <!-- Countdown Popup Overlay -->
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup">
+            <div class="popup-video-bg">
+                <video autoplay muted loop playsinline>
+                    <source src="images/background%20animations/cce3420c4befa0a135e495d03b7f5f8c_720w.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="popup-video-overlay"></div>
+            <div class="popup-content">
+                <h2>New <span class="gradient-text">ABTC Mining Opportunities</span> In</h2>
+                <div class="popup-timer">
+                    <div class="time-unit"><span id="popup-days" class="time-number">00</span><span class="time-label">Days</span></div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit"><span id="popup-hours" class="time-number">00</span><span class="time-label">Hours</span></div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit"><span id="popup-minutes" class="time-number">00</span><span class="time-label">Minutes</span></div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit"><span id="popup-seconds" class="time-number">00</span><span class="time-label">Seconds</span></div>
+                </div>
+<button class="btn btn-primary btn-glow" onclick="document.getElementById('popup-overlay').classList.remove('active'); showPage('home');">Invest in ABTC Markets Today</button>
+                <button class="btn btn-outline" id="popup-close-btn" style="margin-top: 16px;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <div>
+                    <h2>Have any Queries?</h2>
+                    <p>No worries, Send your queries to us.</p>
+                </div>
+                <span class="modal-close" id="modal-close">&times;</span>
+            </div>
+            <form id="contact-form" class="modal-form">
+                <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+                <div class="form-group"><input type="email" name="email" placeholder="Your Work Email" required></div>
+                <div class="form-group"><input type="text" name="subject" placeholder="Your Subject" required></div>
+                <div class="form-group"><textarea name="message" rows="3" placeholder="Your Message" required></textarea></div>
+                <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                    <span>Send Message</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Language Dropdown -->
+    <div id="translate-dropdown" class="translate-dropdown">
+        <div class="translate-dropdown-header">
+            <h4>Select Language</h4>
+            <span class="translate-close" id="translate-close">&times;</span>
+        </div>
+        <div class="translate-dropdown-body" id="translate-dropdown-body">
+            <!-- Languages injected by JS -->
+        </div>
+    </div>
+
+    <!-- Google Translate Element -->
+    <div id="google_translate_element" style="display: none;"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
