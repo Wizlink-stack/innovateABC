@@ -257,7 +257,7 @@ function initPopupCountdown() {
 }
 
 /* ============================================
-   BTC/USD CONVERTER
+   BTC/USD CONVERTER (Connected to Backend)
    ============================================ */
 function initConverter() {
     const btcInput = document.getElementById('btc-amount');
@@ -269,11 +269,12 @@ function initConverter() {
 
     async function fetchRate() {
         try {
-            const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+            const response = await fetch('/api/btc-rate');
             const data = await response.json();
-            btcRate = data.bitcoin.usd;
+            btcRate = data.rate;
             if (rateInfo) {
-                rateInfo.textContent = `Current BTC/USD rate: $${btcRate.toLocaleString()}`;
+                const source = data.cached ? '(cached)' : data.fallback ? '(fallback)' : '(live)';
+                rateInfo.textContent = `Current BTC/USD rate: $${btcRate.toLocaleString()} ${source}`;
             }
         } catch (error) {
             console.error('Error fetching BTC rate:', error);
@@ -311,6 +312,8 @@ function initConverter() {
     });
 
     fetchRate();
+    // Refresh rate every 60 seconds
+    setInterval(fetchRate, 60000);
 }
 
 /* ============================================
@@ -340,7 +343,7 @@ function initSwiper() {
 }
 
 /* ============================================
-   LIVE CHAT
+   LIVE CHAT (Connected to Backend)
    ============================================ */
 function initChat() {
     const chatToggle = document.getElementById('chat-toggle');
@@ -349,6 +352,7 @@ function initChat() {
     const chatInput = document.getElementById('chat-input');
     const chatSend = document.getElementById('chat-send');
     const chatMessages = document.getElementById('chat-messages');
+    const sessionId = 'session_' + Math.random().toString(36).substring(2, 15);
 
     chatToggle?.addEventListener('click', () => {
         chatModal?.classList.toggle('active');
@@ -358,23 +362,29 @@ function initChat() {
         chatModal?.classList.remove('active');
     });
 
-    function sendMessage() {
+    async function sendMessage() {
         const message = chatInput?.value.trim();
         if (!message) return;
 
         addMessage(message, 'user');
         chatInput.value = '';
 
-        // Simulate bot response
-        setTimeout(() => {
-            const responses = [
-                'Thank you for reaching out! Our support team will get back to you shortly.',
-                'We appreciate your interest in ABTCMINING. How else can we help?',
-                'Our team is reviewing your message. Expect a response within 24 hours.'
-            ];
-            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-            addMessage(randomResponse, 'bot');
-        }, 1000);
+        try {
+            const response = await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message, sessionId })
+            });
+            const data = await response.json();
+            if (data.success && data.botReply) {
+                addMessage(data.botReply.message, 'bot');
+            } else {
+                addMessage('Sorry, something went wrong. Please try again.', 'bot');
+            }
+        } catch (error) {
+            console.error('Chat error:', error);
+            addMessage('Connection error. Please check your internet.', 'bot');
+        }
     }
 
     function addMessage(text, sender) {
@@ -392,7 +402,7 @@ function initChat() {
 }
 
 /* ============================================
-   CONTACT MODAL
+   CONTACT MODAL (Connected to Backend)
    ============================================ */
 function initContactModal() {
     const contactBtn = document.getElementById('contact-btn');
@@ -421,12 +431,32 @@ function initContactModal() {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span>Sending...</span>';
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        const formData = {
+            name: contactForm.querySelector('[name="name"]')?.value,
+            email: contactForm.querySelector('[name="email"]')?.value,
+            subject: contactForm.querySelector('[name="subject"]')?.value,
+            message: contactForm.querySelector('[name="message"]')?.value
+        };
 
-        showToast('Message sent successfully!', 'success');
-        contactForm.reset();
-        contactModal.classList.remove('active');
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                showToast('Message sent successfully!', 'success');
+                contactForm.reset();
+                contactModal.classList.remove('active');
+            } else {
+                showToast(data.error || 'Failed to send message.', 'error');
+            }
+        } catch (error) {
+            console.error('Contact form error:', error);
+            showToast('Network error. Please try again later.', 'error');
+        }
 
         submitBtn.disabled = false;
         submitBtn.innerHTML = `<span>Send Message</span>
